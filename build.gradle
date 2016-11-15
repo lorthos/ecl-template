@@ -1,0 +1,22 @@
+apply plugin: "cpp"
+
+model {
+    components {
+        main(NativeExecutableSpec) {
+            sources {
+                cpp {
+                    source {
+                        srcDir "src/ecltemplate/cpp"
+                        include "**/*.cpp"
+                    }
+                }
+            }
+            binaries.all {
+                if (toolChain in Clang) {
+                    cppCompiler.args "-std=c++11","-I/usr/local/include"
+                    linker.args "-L/usr/local/lib","-lecl"
+                }
+            }
+        }
+    }
+}
