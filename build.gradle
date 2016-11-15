@@ -13,7 +13,7 @@ model {
             }
             binaries.all {
                 if (toolChain in Clang) {
-                    cppCompiler.args "-std=c++11","-I/usr/local/include"
+                    cppCompiler.args "-I/usr/local/include"
                     linker.args "-L/usr/local/lib","-lecl"
                 }
             }
