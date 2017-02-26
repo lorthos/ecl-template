@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include "ui.h"
+
 cl_object ecl_eval(const std::string &call)
 {
   return cl_safe_eval(c_string_to_object(call.c_str()), Cnil, Cnil);
@@ -32,10 +34,12 @@ int main(int argc, char *argv[])
   auto lisp_val = ecl_to_float(ecl_eval("(lisp_sum 7 11)"));
   std::cout << "Result: " << lisp_val << std::endl;
 
-  for (int counter = 0; counter < 20; counter++)
-  {
-    sleep(1);
-  }
+  ogl_w();
+
+  // for (int counter = 0; counter < 20; counter++)
+  // {
+  //   sleep(1);
+  // }
 
   return 0;
 }

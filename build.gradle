@@ -14,7 +14,9 @@ model {
             binaries.all {
                 if (toolChain in Clang) {
                     cppCompiler.args "-I/usr/local/include"
-                    linker.args "-L/usr/local/lib","-lecl"
+                    linker.args "-L/usr/local/lib","-lecl","-lglfw3",
+                    "-framework","Cocoa","-framework","IOKit","-framework","CoreVideo",
+                    "-framework","OpenGL","-arch","x86_64","-lglew"
                 }
             }
         }
