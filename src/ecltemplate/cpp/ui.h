@@ -5,9 +5,9 @@
 #include <sstream>
 #include <string>
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-
+//#include <GL/glew.h>
+//#include <GLFW/glfw3.h>
+#include <SFML/Window.hpp>
 
 int ogl_w();
 

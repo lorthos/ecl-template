@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
   auto lisp_val = ecl_to_float(ecl_eval("(lisp_sum 7 11)"));
   std::cout << "Result: " << lisp_val << std::endl;
 
-  ogl_w();
+//  ogl_w();
 
   // for (int counter = 0; counter < 20; counter++)
   // {
