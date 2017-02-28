@@ -15,7 +15,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") # -DSFML_STATIC")
 set(EXECUTABLE_NAME "ecl_template")
 
 set(SOURCE_FILES
-        src/ecltemplate/cpp/main.cpp)
+        src/ecltemplate/cpp/main.cpp
+        src/ecltemplate/cpp/ui.h
+        src/ecltemplate/cpp/ui.cpp
+        )
 
 add_executable(ecl_template ${SOURCE_FILES})
 
