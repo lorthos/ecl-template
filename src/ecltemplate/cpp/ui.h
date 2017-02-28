@@ -11,6 +11,6 @@
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 
-int ogl_w();
+int ogl_w(std::stringstream *result_ss);
 
 #endif
