@@ -5,3 +5,5 @@ CMakeCache.txt
 *.cbp
 Makefile
 CMakeFiles/
+.idea/
+*.bin
