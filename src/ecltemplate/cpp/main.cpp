@@ -1,12 +1,12 @@
 #include <ecl/ecl.h>
-#include <unistd.h>
 #include <sstream>
-#include <string>
 #include <iostream>
 
 #include "ui.h"
+#include "engine.h"
+using namespace std;
 
-cl_object ecl_eval(const std::string &call) {
+cl_object ecl_eval(const string &call) {
     return cl_safe_eval(c_string_to_object(call.c_str()), Cnil, Cnil);
 }
 
@@ -15,11 +15,11 @@ void start_ecl(int argc, char **argv) {
     cl_boot(argc, argv);
     atexit(cl_shutdown);
 
-    std::stringstream ss;
+    stringstream ss;
     ss << "(load \"" << argv[1] << "\")";
-    std::string command = ss.str();
+    string command = ss.str();
 
-    std::cout << "Loading lisp file: " << command << std::endl;
+    cout << "Loading lisp file: " << command << endl;
 
     ecl_eval(command);
     ecl_eval("(lisp_hello)");
@@ -29,10 +29,16 @@ int main(int argc, char *argv[]) {
     start_ecl(argc, argv);
 
     auto lisp_val = ecl_to_float(ecl_eval("(lisp_sum 7 11)"));
-    std::stringstream result_str;
-    result_str << "Result: " << lisp_val << std::endl;
+    stringstream result_str;
+    result_str << "Result: " << lisp_val << endl;
 
-    ogl_w(&result_str);
+//    ogl_w(&result_str);
+
+    // Declare an instance of Engine
+    Engine engine;
+
+    // Start the engine
+    engine.start();
 
     // for (int counter = 0; counter < 20; counter++)
     // {

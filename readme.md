@@ -14,6 +14,7 @@ App template to run ECL & Cpp together, built with gradle
 ## Usage
 
         ./build/exe/main/main src/ecltemplate/lisp/main.lisp
+        ./ecl_template src/ecltemplate/lisp/main.lisp
 
 
 

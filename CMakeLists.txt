@@ -18,7 +18,7 @@ set(SOURCE_FILES
         src/ecltemplate/cpp/main.cpp
         src/ecltemplate/cpp/ui.h
         src/ecltemplate/cpp/ui.cpp
-        )
+        src/ecltemplate/cpp/bob.h src/ecltemplate/cpp/bob.cpp src/ecltemplate/cpp/engine.h src/ecltemplate/cpp/engine.cpp src/ecltemplate/cpp/input.cpp src/ecltemplate/cpp/update.cpp src/ecltemplate/cpp/draw.cpp)
 
 add_executable(ecl_template ${SOURCE_FILES})
 
