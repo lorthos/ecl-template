@@ -26,10 +26,8 @@ private:
     void draw();
 
 public:
-    // The Engine constructor
     Engine();
 
-    // start will call all the private functions
     void start();
 
 };

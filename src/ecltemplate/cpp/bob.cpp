@@ -2,14 +2,13 @@
  
 Bob::Bob()
 {
-    // How fast does Bob move?
+    // movement speed
     m_Speed = 400;
- 
-    // Associate a texture with the sprite
+
     m_Texture.loadFromFile("resources/bob.png");
     m_Sprite.setTexture(m_Texture);     
  
-    // Set the Bob's starting position
+    // starting pos
     m_Position.x = 500;
     m_Position.y = 800;
  

@@ -27,10 +27,8 @@ private:
     // Bob's speed in pixels per second
     float m_Speed;
 
-    // Public functions
 public:
 
-    // We will set Bob up in the constructor
     Bob();
 
     // Send a copy of the sprite to main
@@ -46,7 +44,7 @@ public:
 
     void stopRight();
 
-    // We will call this function once every frame
+    // frame func
     void update(float elapsedTime);
 
 };
